@@ -29,10 +29,10 @@ def main():
     
     with col2:
         year = st.number_input('Año:', min_value=2005.0, max_value=2015.0)
-        county = st.selectbox('Condado:', opciones=['Statewide', 'Alameda', 'Amador', 'Butte', 'Calaveras', 'Colusa', 'Contra Costa', 'Del Norte', 'El Dorado', 'Fresno', 'Glenn', 'Humboldt', 'Imperial', 'Inyo', 'Kern', 'Kings', 'Lake', 'Lassen', 'Los Angeles', 'Madera', 'Marin', 'Mariposa', 'Mendocino', 'Merced', 'Modoc', 'Mono', 'Monterey', 'Napa', 'Nevada', 'Orange', 'Placer', 'Plumas', 'Riverside', 'Sacramento', 'San Benito', 'San Bernardino', 'San Diego', 'San Francisco', 'San Joaquin', 'San Luis Obispo', 'San Mateo', 'Santa Barbara', 'Santa Clara', 'Santa Cruz', 'Shasta', 'Siskiyou', 'Solano', 'Sonoma', 'Stanislaus', 'Sutter', 'Tehama', 'Trinity', 'Tulare', 'Tuolumne', 'Ventura', 'Yolo', 'Yuba'])
+        county = st.selectbox('Condado:', options=['Statewide', 'Alameda', 'Amador', 'Butte', 'Calaveras', 'Colusa', 'Contra Costa', 'Del Norte', 'El Dorado', 'Fresno', 'Glenn', 'Humboldt', 'Imperial', 'Inyo', 'Kern', 'Kings', 'Lake', 'Lassen', 'Los Angeles', 'Madera', 'Marin', 'Mariposa', 'Mendocino', 'Merced', 'Modoc', 'Mono', 'Monterey', 'Napa', 'Nevada', 'Orange', 'Placer', 'Plumas', 'Riverside', 'Sacramento', 'San Benito', 'San Bernardino', 'San Diego', 'San Francisco', 'San Joaquin', 'San Luis Obispo', 'San Mateo', 'Santa Barbara', 'Santa Clara', 'Santa Cruz', 'Shasta', 'Siskiyou', 'Solano', 'Sonoma', 'Stanislaus', 'Sutter', 'Tehama', 'Trinity', 'Tulare', 'Tuolumne', 'Ventura', 'Yolo', 'Yuba'])
     
     with col3:
-        psi_description = st.selectbox('Descripción PSI:', opciones=['Retained Surgical Item or Unretrieved Device Fragment', 'Iatrogenic Pneumothorax', 'Central Venous Catheter-Related Blood Stream Infection', 'Postoperative Wound Dehiscence', 'Accidental Puncture or Laceration', 'Transfusion Reaction', 'Perioperative Hemorrhage or Hematoma']) 
+        psi_description = st.selectbox('Descripción PSI:', options=['Retained Surgical Item or Unretrieved Device Fragment', 'Iatrogenic Pneumothorax', 'Central Venous Catheter-Related Blood Stream Infection', 'Postoperative Wound Dehiscence', 'Accidental Puncture or Laceration', 'Transfusion Reaction', 'Perioperative Hemorrhage or Hematoma']) 
     
     if st.button('Predecir'):
         input_data = pd.DataFrame({'Year': [year], 'County': [county], 'PSIDescription': [psi_description]})
